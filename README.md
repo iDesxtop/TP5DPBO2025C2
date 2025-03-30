@@ -33,4 +33,13 @@ Before:
 After:  
 ![after delete](https://github.com/user-attachments/assets/4fcbeb98-1d69-4ee5-b12c-b14c29467fdd)
 
- 
+## Error Handling
+Terdapat 2 error handling  
+### Insert/Update tapi ada kolom kosong  
+![error saat insert tapi ada yang kosong](https://github.com/user-attachments/assets/1a6d5fc2-15d4-4172-9802-4b5527f3f107)
+![error saat update tapi ada yang kosong](https://github.com/user-attachments/assets/8f7eeca3-f217-4a2f-b88e-c944fa8c9170)
+### Insert/Update tapi NIM sudah ada  
+![error duplikat nim](https://github.com/user-attachments/assets/5fe2e4b5-cfc3-4f9b-8d7d-a62913d564c8)
+
+
+
