@@ -40,6 +40,7 @@ Terdapat 2 error handling
 ![error saat update tapi ada yang kosong](https://github.com/user-attachments/assets/8f7eeca3-f217-4a2f-b88e-c944fa8c9170)
 ### Insert/Update tapi NIM sudah ada  
 ![error duplikat nim](https://github.com/user-attachments/assets/5fe2e4b5-cfc3-4f9b-8d7d-a62913d564c8)
+![error duplikat nim update](https://github.com/user-attachments/assets/5a75910d-d81c-4c4c-90de-659c0635a29e)
 
 
 
