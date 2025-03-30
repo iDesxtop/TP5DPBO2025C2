@@ -2,7 +2,7 @@
 Saya Muhammad Alvinza dengan NIM 2304879 mengerjakan Tugas Praktikum 5 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 ## Desain Program
-![General](https://github.com/user-attachments/assets/a792c9d8-593f-47f2-bc40-8886e52bacda)
+![General](https://github.com/user-attachments/assets/a792c9d8-593f-47f2-bc40-8886e52bacda)  
 Program ini dapat melakukan Create Update Delete (CRUD) dan menampilkan data-data mahasiswa dari Database db_mahasiswa pada tabel mahasiswa.    
 Atribut yang dimiliki adalah NIM, Nama, Jenis Kelamin, dan Umur mahasiswa.  
 Pada input NIM, kita perlu memasukkan angka pada TextField yang disediakan, sama seperti Nama.    
