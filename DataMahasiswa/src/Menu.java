@@ -204,6 +204,12 @@ public class Menu extends JFrame{
         String jenisKelamin = jenisKelaminComboBox.getSelectedItem().toString();
         int umur = umurSlider.getValue();
 
+        // Validasi input kosong
+        if(nim.isEmpty() || nama.isEmpty() || jenisKelamin.isEmpty() || umur == 0) {
+            JOptionPane.showMessageDialog(null, "Semua field harus diisi!", "Error", JOptionPane.ERROR_MESSAGE);
+            return; // Hentikan proses insert jika ada input kosong
+        }
+
         // cari nim yang sama
         try {
             ResultSet resultSet = database.selectQuery("SELECT nim FROM mahasiswa");
@@ -219,14 +225,6 @@ public class Menu extends JFrame{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
-        // Validasi input kosong
-        if(nim.isEmpty() || nama.isEmpty() || jenisKelamin.isEmpty() || umur == 0) {
-            JOptionPane.showMessageDialog(null, "Semua field harus diisi!", "Error", JOptionPane.ERROR_MESSAGE);
-            return; // Hentikan proses insert jika ada input kosong
-        }
-
 
         // tambahkan data ke dalam list/database
         String sql = "INSERT INTO mahasiswa VALUES (null, '" + nim + "', '" + nama + "', '" + jenisKelamin + "', '" + umur + "');";
@@ -257,6 +255,22 @@ public class Menu extends JFrame{
         if(nim.isEmpty() || nama.isEmpty() || jenisKelamin.isEmpty() || umur == 0) {
             JOptionPane.showMessageDialog(null, "Semua field harus diisi!", "Error", JOptionPane.ERROR_MESSAGE);
             return; // Hentikan proses insert jika ada input kosong
+        }
+
+        // cari nim yang sama
+        try {
+            ResultSet resultSet = database.selectQuery("SELECT nim FROM mahasiswa");
+            while(resultSet.next()){
+                String nimSudahAda = resultSet.getString("nim");
+
+                if(nim.equals(nimSudahAda)){
+                    JOptionPane.showMessageDialog(null, "NIM '" + nim + "'Sudah ada!", "Error", JOptionPane.ERROR_MESSAGE);
+                    return; // Hentikan proses insert jika ada input kosong
+                }
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
 
         // tambahkan data ke dalam list/database
